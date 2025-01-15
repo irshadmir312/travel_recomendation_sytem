@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 *.pkl filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
+=======
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.pkl filter=lfs diff=lfs merge=lfs -text
+>>>>>>> 49279c4 (Add large file types to Git LFS tracking)
