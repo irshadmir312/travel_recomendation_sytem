@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation System kashmir </title>
+    <style>
+        /* General styles for resetting default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Styles for the body with specific font and overflow properties */
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        /* Styles for background video container */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Ensures the video stays behind other content */
+        }
+        /* Styling the video to fit the container */
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures video covers the container without distortion */
+        }
+        /* Styling for a centrally positioned transparent div */
+        .center-div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the div on the page */
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for 3D effect */
+        }
+        .center-div h1 {
+            font-size: 2.5rem; /* Responsive font size */
+            margin-bottom: 20px;
+            color: #333; /* Dark gray color for text */
+        }
+        /* Styling for the button with a gradient background */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2rem;
+            color: #dc1212; /* White text */
+            text-decoration: none;
+            background: linear-gradient(90deg, #19d181, #07cd74); /* green gradient background */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+        }
+        .btn:hover {
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover for depth */
+        }
+    </style>
+</head>
+<body>
+    <!-- Section containing the background video element -->
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{{url_for('static',filename='Travel Agency Logo Advert.mp4')}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Transparent div that appears over the video -->
+    <div class="center-div">
+        <h1>Welcome to the Travel Recommendation System kashmir</h1>
+        <a href="/recommendation" class="btn">Travel Recommendation</a> <!-- Button for navigating to the recommendation page -->
+    </div>
+</body>
+</html>
